@@ -100,19 +100,6 @@ double evaluation_solution(int* sol) {
 }
 
 
-
-bool isTableauRempliDeMoinsUn(double tableau[NBR_TOWNS][NBR_TOWNS]) {
-  for (int i = 0; i < NBR_TOWNS; i++) {
-    for (int j = 0; j < NBR_TOWNS; j++) {
-      if (tableau[i][j] != -1) {
-        return false;
-      }
-    }
-  }
-  return true;
-}
-
-
 /**
  * nearest neighbour solution
  */
@@ -210,9 +197,7 @@ void build_solution() {
  */
 void little_algorithm(double d0[NBR_TOWNS][NBR_TOWNS], int iteration, double eval_node_parent) {
 
-  /*if (isTableauRempliDeMoinsUn(d0)) {
-    return;
-  }
+  /*
   printf("\n\n===========================================================================\n");
   printf("Initial matrix:\n");
   print_matrix(d0);
